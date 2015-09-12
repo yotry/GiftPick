@@ -225,6 +225,8 @@ static const CGFloat GPBrandDetailSegmentH = 44;
     // 只有当segment悬停时才执行
     if (self.brandDetailSegment.superview != self.headerView) {
         GPBrandMakeOffsetIdentify(self.collectionView);
+    } else {
+        self.collectionView.contentOffset = self.webView.scrollView.contentOffset;
     }
 }
 
@@ -237,6 +239,8 @@ static const CGFloat GPBrandDetailSegmentH = 44;
     // 只有当segment悬停时才执行
     if (self.brandDetailSegment.superview != self.headerView) {
         GPBrandMakeOffsetIdentify(self.webView.scrollView);
+    } else {
+        self.webView.scrollView.contentOffset = self.collectionView.contentOffset;
     }
 }
 

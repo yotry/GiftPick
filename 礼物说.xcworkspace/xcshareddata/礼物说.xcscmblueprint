@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "61AC4B8CCE49E1D31A4B89C441008D4B57919613",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E8BC197F9C5A3E7057AA7C9B230A40320C9ED267" : 0,
+    "61AC4B8CCE49E1D31A4B89C441008D4B57919613" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1E5E906C-A71D-4E8A-BE1E-71921EA97412",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E8BC197F9C5A3E7057AA7C9B230A40320C9ED267" : "%E7%A4%BC%E7%89%A9%E8%AF%B4",
+    "61AC4B8CCE49E1D31A4B89C441008D4B57919613" : "GiftPick\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "礼物说",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "礼物说.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/tripleCC\/GiftPick.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "61AC4B8CCE49E1D31A4B89C441008D4B57919613"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/git.oschina.net\/triplec\/GiftPick.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E8BC197F9C5A3E7057AA7C9B230A40320C9ED267"
+    }
+  ]
+}
