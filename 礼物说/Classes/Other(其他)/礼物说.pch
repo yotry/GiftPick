@@ -1,0 +1,54 @@
+//
+//  礼物说.pch
+//  礼物说
+//
+//  Created by tripleCC on 15/1/8.
+//  Copyright (c) 2014年 giftTalk All rights reserved.
+//
+
+#ifndef ________pch
+#define ________pch
+
+#import "UIView+TPCExtension.h"
+#import "UIColor+TPCExtension.h"
+#import "UIImage+TPCExtension.h"
+#import "GPConst.h"
+#import <AFNetworking.h>
+#import <UIImageView+WebCache.h>
+#import <SDWebImageDownloader.h>
+#import <MJExtension.h>
+#import <MJRefresh.h>
+#import <UIButton+WebCache.h>
+#import <SDWebImageDownloader.h>
+#import <NJKWebViewProgressView.h>
+#import <NJKWebViewProgress.h>
+#import <SDImageCache.h>
+#import <SVProgressHUD.h>
+#import "NSDate+HYWExtension.h"
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+#import <Masonry.h>
+#import "UIBarButtonItem+navigation.h"
+
+#undef DEBUG
+#ifdef DEBUG
+#define TPCLog(...) NSLog(__VA_ARGS__)
+#else
+#define TPCLog(...)
+#endif
+
+#define TPCScreenW [UIScreen mainScreen].bounds.size.width
+#define TPCScreenH [UIScreen mainScreen].bounds.size.height
+#define TPCKeyWindow [UIApplication sharedApplication].keyWindow
+#define TPCScreenBounds [UIScreen mainScreen].bounds
+#define TPCRGBColor(r, g, b)    [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
+// 主题颜色
+#define TPCThemeColor           TPCRGBColor(248, 78, 78)
+#define TPCBackgroundColor           TPCRGBColor(235, 235, 241)
+#define TPCDisabledThemeColor   TPCRGBColor(255, 139, 139)
+#define TPCTitleGrayColor       TPCRGBColor(89, 89, 89)
+// 主题文字格式名
+#define TPCThemeFontName        @"Courier"
+
+#define GPStatusBarH  [UIApplication sharedApplication].statusBarFrame.size.height
+#endif

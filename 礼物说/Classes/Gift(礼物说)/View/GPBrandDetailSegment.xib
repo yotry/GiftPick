@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GPBrandDetailSegment">
+            <rect key="frame" x="0.0" y="-1" width="387" height="46"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znh-MS-Wlk">
+                    <rect key="frame" x="0.0" y="0.0" width="193.5" height="46"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="全部礼物">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="leftButtonOnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="GeN-3j-ER1"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5y-0m-Nyb">
+                    <rect key="frame" x="193" y="0.0" width="193.5" height="46"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="品牌介绍">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="rightButtonOnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="0NW-Ef-B9d"/>
+                    </connections>
+                </button>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xaf-hu-YLZ" userLabel="下割线">
+                    <rect key="frame" x="0.0" y="45" width="386.5" height="1"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="YB4-z6-784"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zkj-AJ-YTf" userLabel="indicatorView">
+                    <rect key="frame" x="0.0" y="44" width="194" height="2"/>
+                    <color key="backgroundColor" red="0.95294117647058818" green="0.15686274509803921" blue="0.058823529411764705" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="TA2-af-laN"/>
+                    </constraints>
+                </view>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqf-kz-X36" userLabel="中割线">
+                    <rect key="frame" x="193" y="0.0" width="1" height="45"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="8EA-D2-Dew"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="znh-MS-Wlk" secondAttribute="bottom" id="7pI-H2-FJ4"/>
+                <constraint firstItem="xaf-hu-YLZ" firstAttribute="top" secondItem="hqf-kz-X36" secondAttribute="bottom" id="9Ab-W5-dLK"/>
+                <constraint firstItem="zkj-AJ-YTf" firstAttribute="leading" secondItem="znh-MS-Wlk" secondAttribute="leading" id="F6N-6Y-89r"/>
+                <constraint firstItem="k5y-0m-Nyb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Flk-Tr-IcX"/>
+                <constraint firstAttribute="bottom" secondItem="xaf-hu-YLZ" secondAttribute="bottom" id="WzR-5O-wNz"/>
+                <constraint firstItem="znh-MS-Wlk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Y9y-rU-kvI"/>
+                <constraint firstItem="zkj-AJ-YTf" firstAttribute="trailing" secondItem="znh-MS-Wlk" secondAttribute="trailing" id="bpK-tH-YHE"/>
+                <constraint firstItem="znh-MS-Wlk" firstAttribute="width" secondItem="k5y-0m-Nyb" secondAttribute="width" id="d9t-rY-Att"/>
+                <constraint firstAttribute="bottom" secondItem="k5y-0m-Nyb" secondAttribute="bottom" id="i7a-cC-S4r"/>
+                <constraint firstAttribute="centerX" secondItem="hqf-kz-X36" secondAttribute="centerX" id="jLN-g4-m2K"/>
+                <constraint firstAttribute="trailing" secondItem="k5y-0m-Nyb" secondAttribute="trailing" id="l6e-gX-Q1p"/>
+                <constraint firstAttribute="bottom" secondItem="zkj-AJ-YTf" secondAttribute="bottom" id="oJA-eS-zVB"/>
+                <constraint firstAttribute="trailing" secondItem="xaf-hu-YLZ" secondAttribute="trailing" id="pVC-Aa-EWj"/>
+                <constraint firstItem="zkj-AJ-YTf" firstAttribute="width" secondItem="znh-MS-Wlk" secondAttribute="width" id="px5-Jc-4ZB"/>
+                <constraint firstItem="hqf-kz-X36" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rJo-JF-zMe"/>
+                <constraint firstItem="znh-MS-Wlk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ysW-7B-pAz"/>
+                <constraint firstItem="xaf-hu-YLZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zhc-F1-hMp"/>
+                <constraint firstItem="k5y-0m-Nyb" firstAttribute="leading" secondItem="znh-MS-Wlk" secondAttribute="trailing" id="zjC-Y6-B0k"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="bpK-tH-YHE"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="indicatorView" destination="zkj-AJ-YTf" id="iTz-qj-rgG"/>
+                <outlet property="indicatorViewToAllGiftButtonLeading" destination="F6N-6Y-89r" id="bkO-6T-Fe2"/>
+                <outlet property="leftButton" destination="znh-MS-Wlk" id="tm2-uo-Tfs"/>
+                <outlet property="rightButton" destination="k5y-0m-Nyb" id="J0h-o1-Ry2"/>
+                <outletCollection property="seperatorLines" destination="xaf-hu-YLZ" id="GIY-EC-Wpx"/>
+                <outletCollection property="seperatorLines" destination="hqf-kz-X36" id="w3H-9q-ZOO"/>
+            </connections>
+            <point key="canvasLocation" x="230.5" y="474"/>
+        </view>
+    </objects>
+</document>

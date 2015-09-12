@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GPSegment">
+            <rect key="frame" x="0.0" y="0.0" width="576" height="78"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOA-HT-I47">
+                    <rect key="frame" x="0.0" y="10" width="288" height="68"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="图文介绍">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="descClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="rNy-sq-uuT"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fg0-4x-3gQ">
+                    <rect key="frame" x="288" y="10" width="288" height="68"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="评论(40)">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="commentClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Iki-5V-CEY"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBL-mo-WKS" userLabel="redView">
+                    <rect key="frame" x="0.0" y="76" width="288" height="2"/>
+                    <color key="backgroundColor" red="0.98823529409999999" green="0.34509803919999998" blue="0.054901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="amO-FI-eAf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fg0-4x-3gQ" secondAttribute="trailing" id="1vi-6m-D2N"/>
+                <constraint firstItem="DOA-HT-I47" firstAttribute="top" secondItem="fg0-4x-3gQ" secondAttribute="top" id="A3G-rk-gmj"/>
+                <constraint firstItem="DOA-HT-I47" firstAttribute="bottom" secondItem="fg0-4x-3gQ" secondAttribute="bottom" id="AoL-ZI-SDI"/>
+                <constraint firstAttribute="bottom" secondItem="DOA-HT-I47" secondAttribute="bottom" id="ObA-iY-yfP"/>
+                <constraint firstItem="DOA-HT-I47" firstAttribute="width" secondItem="vBL-mo-WKS" secondAttribute="width" id="QgU-cx-l0A"/>
+                <constraint firstItem="DOA-HT-I47" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SO7-CT-3p0"/>
+                <constraint firstAttribute="bottom" secondItem="vBL-mo-WKS" secondAttribute="bottom" id="aAI-uu-kZr"/>
+                <constraint firstItem="fg0-4x-3gQ" firstAttribute="leading" secondItem="DOA-HT-I47" secondAttribute="trailing" id="mhD-ie-Bqi"/>
+                <constraint firstItem="DOA-HT-I47" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="vqh-OA-9Eb"/>
+                <constraint firstItem="vBL-mo-WKS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="x9w-2A-yBi"/>
+                <constraint firstItem="DOA-HT-I47" firstAttribute="width" secondItem="fg0-4x-3gQ" secondAttribute="width" id="xtZ-VV-vxn"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="comment" destination="fg0-4x-3gQ" id="pic-7O-7zL"/>
+                <outlet property="desc" destination="DOA-HT-I47" id="vf4-kF-7Zp"/>
+                <outlet property="redView" destination="vBL-mo-WKS" id="J2L-IS-JQd"/>
+                <outlet property="redViewLeftConstraint" destination="x9w-2A-yBi" id="ZKe-tF-WSY"/>
+            </connections>
+            <point key="canvasLocation" x="330" y="331"/>
+        </view>
+    </objects>
+</document>

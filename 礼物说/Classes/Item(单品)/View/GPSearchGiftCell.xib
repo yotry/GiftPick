@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="searchGift" id="gTV-IL-0wX" customClass="GPSearchGiftCell">
+            <rect key="frame" x="0.0" y="0.0" width="210" height="272"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="210" height="272"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lJh-PF-x6c">
+                        <rect key="frame" x="0.0" y="0.0" width="210" height="210"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="lJh-PF-x6c" secondAttribute="height" multiplier="1:1" id="12J-Z7-T8R"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iev-LR-zbQ" userLabel="name">
+                        <rect key="frame" x="8" y="218" width="194" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdE-CA-4iv" userLabel="price">
+                        <rect key="frame" x="8" y="246" width="37.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.97254901960784312" green="0.30588235294117649" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWY-WP-XFe" userLabel="favorite">
+                        <rect key="frame" x="50.5" y="246" width="151.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                        <state key="normal" image="searchGiftHeart-1">
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="lJh-PF-x6c" secondAttribute="trailing" id="72b-zG-CO0"/>
+                <constraint firstAttribute="bottom" secondItem="QdE-CA-4iv" secondAttribute="bottom" constant="8" id="GdE-6E-NlH"/>
+                <constraint firstItem="QdE-CA-4iv" firstAttribute="centerY" secondItem="kWY-WP-XFe" secondAttribute="centerY" id="IyU-9H-79Y"/>
+                <constraint firstItem="iev-LR-zbQ" firstAttribute="top" secondItem="lJh-PF-x6c" secondAttribute="bottom" constant="8" id="NEQ-K7-byT"/>
+                <constraint firstAttribute="bottom" secondItem="kWY-WP-XFe" secondAttribute="bottom" constant="8" id="PHn-QM-sRP"/>
+                <constraint firstItem="QdE-CA-4iv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Z7p-E1-jNJ"/>
+                <constraint firstItem="iev-LR-zbQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="dAH-cO-WxB"/>
+                <constraint firstItem="lJh-PF-x6c" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eN4-49-j2W"/>
+                <constraint firstItem="kWY-WP-XFe" firstAttribute="leading" secondItem="QdE-CA-4iv" secondAttribute="trailing" constant="5" id="ewk-mJ-sWk"/>
+                <constraint firstAttribute="trailing" secondItem="kWY-WP-XFe" secondAttribute="trailing" constant="8" id="g0z-sR-Wyy"/>
+                <constraint firstItem="kWY-WP-XFe" firstAttribute="width" secondItem="QdE-CA-4iv" secondAttribute="width" id="gc2-sn-Nh2"/>
+                <constraint firstAttribute="trailing" secondItem="iev-LR-zbQ" secondAttribute="trailing" constant="8" id="rXR-Di-kLB"/>
+                <constraint firstItem="lJh-PF-x6c" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="w01-x2-GQo"/>
+                <constraint firstItem="kWY-WP-XFe" firstAttribute="top" secondItem="iev-LR-zbQ" secondAttribute="bottom" constant="8" id="y3V-N8-Kfw"/>
+            </constraints>
+            <size key="customSize" width="232" height="298"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="gc2-sn-Nh2"/>
+                    <exclude reference="y3V-N8-Kfw"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="favoriteView" destination="kWY-WP-XFe" id="AnU-rc-Wis"/>
+                <outlet property="giftImage" destination="lJh-PF-x6c" id="WXp-c0-eMQ"/>
+                <outlet property="nameLabel" destination="iev-LR-zbQ" id="Q6G-du-TiV"/>
+                <outlet property="priceLabel" destination="QdE-CA-4iv" id="Qb1-mh-2WI"/>
+            </connections>
+            <point key="canvasLocation" x="287" y="403"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="searchGiftHeart-1" width="10" height="8"/>
+    </resources>
+</document>

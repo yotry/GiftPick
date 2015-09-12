@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hotWordFooter" id="DGa-lO-z4b" customClass="GPHotWordsCollectionViewFooter">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8c-0n-3gD" userLabel="分割线">
+                    <rect key="frame" x="0.0" y="10" width="320" height="1"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="vpb-fm-j9V"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cd8-dS-3W5">
+                    <rect key="frame" x="100" y="16" width="120" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="56w-KL-BpT"/>
+                        <constraint firstAttribute="height" constant="32" id="rDg-ME-y2o"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="清除搜索历史" image="gift_search_trash">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="H8c-0n-3gD" firstAttribute="leading" secondItem="DGa-lO-z4b" secondAttribute="leading" id="1g8-DW-fEo"/>
+                <constraint firstItem="H8c-0n-3gD" firstAttribute="top" secondItem="DGa-lO-z4b" secondAttribute="top" constant="10" id="GFb-1H-wwi"/>
+                <constraint firstAttribute="centerX" secondItem="cd8-dS-3W5" secondAttribute="centerX" id="MX9-P3-fAx"/>
+                <constraint firstItem="cd8-dS-3W5" firstAttribute="top" secondItem="H8c-0n-3gD" secondAttribute="bottom" constant="5" id="ON3-RY-oOd"/>
+                <constraint firstAttribute="trailing" secondItem="H8c-0n-3gD" secondAttribute="trailing" id="QkC-3u-OdX"/>
+            </constraints>
+            <connections>
+                <outlet property="clearSearchButton" destination="cd8-dS-3W5" id="gn2-Vx-9iK"/>
+            </connections>
+            <point key="canvasLocation" x="202" y="342"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="gift_search_trash" width="32" height="32"/>
+    </resources>
+</document>

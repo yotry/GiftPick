@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="sG5-5u-zcD" customClass="GPBrandDetailHeadImageView">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="143"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mlH-Cz-dvL" userLabel="背景">
+                    <rect key="frame" x="0.0" y="0.0" width="343" height="143"/>
+                </imageView>
+                <view alpha="0.20000000000000007" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GS4-Le-qJy" userLabel="阴影">
+                    <rect key="frame" x="0.0" y="0.0" width="343" height="143"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cRE-gv-4ux" userLabel="品牌头像">
+                    <rect key="frame" x="146" y="30" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="UsF-fa-69Z"/>
+                        <constraint firstAttribute="width" constant="50" id="fOy-Vj-Wwl"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fj-Jv-rjl" userLabel="标题">
+                    <rect key="frame" x="171" y="90" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ye2-mg-azc" userLabel="描述">
+                    <rect key="frame" x="171" y="90" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="mlH-Cz-dvL" firstAttribute="top" secondItem="sG5-5u-zcD" secondAttribute="top" id="1Hs-Xq-AF3"/>
+                <constraint firstItem="9fj-Jv-rjl" firstAttribute="centerX" secondItem="Ye2-mg-azc" secondAttribute="centerX" id="8ML-TU-VOr"/>
+                <constraint firstItem="GS4-Le-qJy" firstAttribute="top" secondItem="sG5-5u-zcD" secondAttribute="top" id="Gzd-Ji-pg0"/>
+                <constraint firstItem="GS4-Le-qJy" firstAttribute="leading" secondItem="sG5-5u-zcD" secondAttribute="leading" id="HrU-9F-bpf"/>
+                <constraint firstAttribute="trailing" secondItem="GS4-Le-qJy" secondAttribute="trailing" id="Ih5-Fc-gpb"/>
+                <constraint firstItem="cRE-gv-4ux" firstAttribute="top" secondItem="sG5-5u-zcD" secondAttribute="top" constant="30" id="MdD-wH-STW"/>
+                <constraint firstItem="9fj-Jv-rjl" firstAttribute="top" secondItem="cRE-gv-4ux" secondAttribute="bottom" constant="10" id="QhS-ki-dSJ"/>
+                <constraint firstItem="mlH-Cz-dvL" firstAttribute="leading" secondItem="sG5-5u-zcD" secondAttribute="leading" id="SjS-s3-ega"/>
+                <constraint firstAttribute="bottom" secondItem="mlH-Cz-dvL" secondAttribute="bottom" id="V16-LW-t4c"/>
+                <constraint firstAttribute="centerX" secondItem="cRE-gv-4ux" secondAttribute="centerX" id="k2d-3y-Gjj"/>
+                <constraint firstAttribute="bottom" secondItem="GS4-Le-qJy" secondAttribute="bottom" id="oFd-mL-wdc"/>
+                <constraint firstItem="Ye2-mg-azc" firstAttribute="top" secondItem="9fj-Jv-rjl" secondAttribute="bottom" id="r4a-3Y-1DH"/>
+                <constraint firstAttribute="trailing" secondItem="mlH-Cz-dvL" secondAttribute="trailing" id="rED-AM-9Pc"/>
+                <constraint firstItem="cRE-gv-4ux" firstAttribute="centerX" secondItem="9fj-Jv-rjl" secondAttribute="centerX" id="zhG-jp-PCf"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backgroundImage" destination="mlH-Cz-dvL" id="mxl-Vl-hD5"/>
+                <outlet property="brandIconImage" destination="cRE-gv-4ux" id="Vj2-VM-cxy"/>
+                <outlet property="detailLabel" destination="Ye2-mg-azc" id="Rzt-WA-xM5"/>
+                <outlet property="titleLabel" destination="9fj-Jv-rjl" id="ehC-Gm-joh"/>
+            </connections>
+            <point key="canvasLocation" x="196.5" y="349.5"/>
+        </view>
+    </objects>
+</document>

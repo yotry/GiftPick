@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1E5E906C-A71D-4E8A-BE1E-71921EA97412</string>
+	<key>IDESourceControlProjectName</key>
+	<string>礼物说</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E8BC197F9C5A3E7057AA7C9B230A40320C9ED267</key>
+		<string>https://git.oschina.net/triplec/GiftPick.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>礼物说.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E8BC197F9C5A3E7057AA7C9B230A40320C9ED267</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://git.oschina.net/triplec/GiftPick.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E8BC197F9C5A3E7057AA7C9B230A40320C9ED267</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E8BC197F9C5A3E7057AA7C9B230A40320C9ED267</string>
+			<key>IDESourceControlWCCName</key>
+			<string>%E7%A4%BC%E7%89%A9%E8%AF%B4</string>
+		</dict>
+	</array>
+</dict>
+</plist>

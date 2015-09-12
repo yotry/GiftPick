@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GPGuideWebviewBottomToolBar">
+            <rect key="frame" x="0.0" y="0.0" width="296" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MDA-ec-mse" userLabel="占位视图">
+                    <rect key="frame" x="0.0" y="0.0" width="14.5" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gc7-gI-PlA" userLabel="占位视图">
+                    <rect key="frame" x="94" y="0.0" width="14" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jag-Bh-QsI" userLabel="占位视图">
+                    <rect key="frame" x="188" y="0.0" width="14" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ngq-cS-m71" userLabel="占位视图">
+                    <rect key="frame" x="282" y="0.0" width="14" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aQ-dC-fRe" customClass="GPVerticalButton">
+                    <rect key="frame" x="14.5" y="0.0" width="79" height="73"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="喜欢" image="gift_guide_like">
+                        <color key="titleColor" red="0.97254901959999995" green="0.30588235289999999" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Guo-LN-Efz" customClass="GPVerticalButton">
+                    <rect key="frame" x="108" y="0.0" width="80" height="73"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <state key="normal" title="分享" image="gift_guide_share">
+                        <color key="titleColor" red="0.97254901959999995" green="0.30588235289999999" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23次分享" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eL1-7e-bSt">
+                    <rect key="frame" x="119" y="73" width="58" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34条评论" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXJ-XW-VnJ">
+                    <rect key="frame" x="213" y="73" width="58" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJw-Za-oGr" customClass="GPVerticalButton">
+                    <rect key="frame" x="202" y="0.0" width="80" height="73"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="评论" image="gift_guide_comment">
+                        <color key="titleColor" red="0.97254901959999995" green="0.30588235289999999" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="312人喜欢" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSe-E7-8L7">
+                    <rect key="frame" x="21" y="73" width="66" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="qSe-E7-8L7" firstAttribute="centerX" secondItem="8aQ-dC-fRe" secondAttribute="centerX" constant="0.25" id="14Y-W7-daS"/>
+                <constraint firstAttribute="bottom" secondItem="eL1-7e-bSt" secondAttribute="bottom" constant="10" id="1OR-2T-NFC"/>
+                <constraint firstAttribute="bottom" secondItem="OXJ-XW-VnJ" secondAttribute="bottom" constant="10" id="20x-5i-TKu"/>
+                <constraint firstItem="OXJ-XW-VnJ" firstAttribute="leading" secondItem="Jag-Bh-QsI" secondAttribute="trailing" id="2F1-rS-cL4"/>
+                <constraint firstAttribute="trailing" secondItem="Ngq-cS-m71" secondAttribute="trailing" id="5Wn-Th-D5b"/>
+                <constraint firstItem="Ngq-cS-m71" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6CK-ko-Ngd"/>
+                <constraint firstAttribute="bottom" secondItem="qSe-E7-8L7" secondAttribute="bottom" constant="10" id="8LD-2s-2S5"/>
+                <constraint firstAttribute="bottom" secondItem="Gc7-gI-PlA" secondAttribute="bottom" id="9eL-l0-e9J"/>
+                <constraint firstItem="Gc7-gI-PlA" firstAttribute="leading" secondItem="MDA-ec-mse" secondAttribute="trailing" constant="80" id="ACR-7P-75x"/>
+                <constraint firstItem="Ngq-cS-m71" firstAttribute="leading" secondItem="oJw-Za-oGr" secondAttribute="trailing" id="AUy-oi-L1h"/>
+                <constraint firstItem="Ngq-cS-m71" firstAttribute="leading" secondItem="eL1-7e-bSt" secondAttribute="trailing" id="G4o-bx-aQU"/>
+                <constraint firstItem="Guo-LN-Efz" firstAttribute="leading" secondItem="Gc7-gI-PlA" secondAttribute="trailing" id="HTw-5U-ogS"/>
+                <constraint firstItem="Jag-Bh-QsI" firstAttribute="leading" secondItem="Guo-LN-Efz" secondAttribute="trailing" id="IdQ-IT-4rq"/>
+                <constraint firstItem="Guo-LN-Efz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Kym-fA-nsJ"/>
+                <constraint firstItem="eL1-7e-bSt" firstAttribute="top" secondItem="Guo-LN-Efz" secondAttribute="bottom" id="NiB-UQ-h7i"/>
+                <constraint firstItem="qSe-E7-8L7" firstAttribute="top" secondItem="8aQ-dC-fRe" secondAttribute="bottom" id="QBd-J2-TyA"/>
+                <constraint firstAttribute="bottom" secondItem="Jag-Bh-QsI" secondAttribute="bottom" id="Rfa-6d-ofZ"/>
+                <constraint firstItem="qSe-E7-8L7" firstAttribute="leading" secondItem="MDA-ec-mse" secondAttribute="trailing" id="Rix-2a-cwI"/>
+                <constraint firstAttribute="bottom" secondItem="MDA-ec-mse" secondAttribute="bottom" id="Sg0-OQ-2W8"/>
+                <constraint firstItem="oJw-Za-oGr" firstAttribute="centerX" secondItem="OXJ-XW-VnJ" secondAttribute="centerX" id="Ubq-ED-sE0"/>
+                <constraint firstItem="8aQ-dC-fRe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="XEr-ZM-0ZX"/>
+                <constraint firstItem="OXJ-XW-VnJ" firstAttribute="top" secondItem="oJw-Za-oGr" secondAttribute="bottom" id="Xzg-iV-ne0"/>
+                <constraint firstItem="oJw-Za-oGr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YBx-Bh-C8Y"/>
+                <constraint firstItem="Jag-Bh-QsI" firstAttribute="width" secondItem="Gc7-gI-PlA" secondAttribute="width" id="ZU5-lo-ooI"/>
+                <constraint firstItem="MDA-ec-mse" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZZa-4u-VRc"/>
+                <constraint firstItem="Gc7-gI-PlA" firstAttribute="leading" secondItem="qSe-E7-8L7" secondAttribute="trailing" id="cy7-sL-gSk"/>
+                <constraint firstItem="Jag-Bh-QsI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="doF-Gk-sd7"/>
+                <constraint firstAttribute="bottom" secondItem="Ngq-cS-m71" secondAttribute="bottom" id="eNa-Pg-lPJ"/>
+                <constraint firstItem="Gc7-gI-PlA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gWR-6q-1uh"/>
+                <constraint firstItem="MDA-ec-mse" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gny-jv-pyX"/>
+                <constraint firstItem="Gc7-gI-PlA" firstAttribute="leading" secondItem="8aQ-dC-fRe" secondAttribute="trailing" id="iWi-PP-dss"/>
+                <constraint firstItem="Jag-Bh-QsI" firstAttribute="leading" secondItem="eL1-7e-bSt" secondAttribute="trailing" id="iqI-5R-2QK"/>
+                <constraint firstItem="eL1-7e-bSt" firstAttribute="leading" secondItem="Gc7-gI-PlA" secondAttribute="trailing" id="jbY-Y9-xOd"/>
+                <constraint firstItem="eL1-7e-bSt" firstAttribute="centerX" secondItem="Guo-LN-Efz" secondAttribute="centerX" id="jx5-sQ-An7"/>
+                <constraint firstAttribute="bottom" secondItem="oJw-Za-oGr" secondAttribute="bottom" id="l40-Jx-OCs"/>
+                <constraint firstItem="oJw-Za-oGr" firstAttribute="leading" secondItem="Jag-Bh-QsI" secondAttribute="trailing" id="lBX-IB-4ik"/>
+                <constraint firstItem="Jag-Bh-QsI" firstAttribute="width" secondItem="Ngq-cS-m71" secondAttribute="width" id="mwt-ts-hQN"/>
+                <constraint firstItem="Jag-Bh-QsI" firstAttribute="leading" secondItem="Gc7-gI-PlA" secondAttribute="trailing" constant="80" id="mzD-Ct-vsZ"/>
+                <constraint firstItem="8aQ-dC-fRe" firstAttribute="leading" secondItem="MDA-ec-mse" secondAttribute="trailing" id="ntg-cd-45U"/>
+                <constraint firstItem="Jag-Bh-QsI" firstAttribute="width" secondItem="MDA-ec-mse" secondAttribute="width" id="ooT-IX-120"/>
+                <constraint firstItem="Ngq-cS-m71" firstAttribute="leading" secondItem="OXJ-XW-VnJ" secondAttribute="trailing" id="oq8-gr-P5m"/>
+                <constraint firstItem="Ngq-cS-m71" firstAttribute="leading" secondItem="Jag-Bh-QsI" secondAttribute="trailing" constant="80" id="xbx-wQ-GQw"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Rix-2a-cwI"/>
+                    <exclude reference="cy7-sL-gSk"/>
+                    <exclude reference="jbY-Y9-xOd"/>
+                    <exclude reference="iqI-5R-2QK"/>
+                    <exclude reference="l40-Jx-OCs"/>
+                    <exclude reference="2F1-rS-cL4"/>
+                    <exclude reference="G4o-bx-aQU"/>
+                    <exclude reference="oq8-gr-P5m"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="commentButton" destination="oJw-Za-oGr" id="JpU-gc-5q8"/>
+                <outlet property="commentCountLabel" destination="OXJ-XW-VnJ" id="BEt-oL-7uK"/>
+                <outlet property="likeButton" destination="8aQ-dC-fRe" id="i3x-Ec-mUT"/>
+                <outlet property="likeCountLabel" destination="qSe-E7-8L7" id="VzM-lR-nQ9"/>
+                <outlet property="shareButton" destination="Guo-LN-Efz" id="IlE-X8-eI8"/>
+                <outlet property="shareCountLabel" destination="eL1-7e-bSt" id="9Hc-3n-RYL"/>
+            </connections>
+            <point key="canvasLocation" x="237" y="432"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="gift_guide_comment" width="32" height="32"/>
+        <image name="gift_guide_like" width="32" height="32"/>
+        <image name="gift_guide_share" width="32" height="32"/>
+    </resources>
+</document>
