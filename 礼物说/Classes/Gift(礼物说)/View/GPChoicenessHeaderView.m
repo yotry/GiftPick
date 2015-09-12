@@ -17,6 +17,7 @@
 #import "GPBrandViewController.h"
 #import "GPDailyLuckyViewController.h"
 #import "GPWebViewController.h"
+#import "GPGuideDetailViewController.h"
 
 @interface GPChoicenessHeaderView() <GPPageScrollViewDelegate>
 
@@ -157,8 +158,12 @@
         webVc.title = banner.target.title;
 
         [navVc pushViewController:webVc animated:YES];
+    } else if ([banner.type isEqualToString:@"post"]) {
+        GPGuideDetailViewController *guideVc = [[GPGuideDetailViewController alloc] init];
+        guideVc.ID = [banner.target_id integerValue];
+        
+        [navVc pushViewController:guideVc animated:YES];
     }
-    
 }
 
 #pragma mark 获取数据
