@@ -145,9 +145,8 @@ static const CGFloat GPHotWordsCollectionMargin = 10;
 
 - (void)setupSearchBar
 {
-    UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, TPCScreenW, self.navigationController.navigationBar.gp_height)];
-    
-    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(-20, 0, TPCScreenW - 54, containerView.gp_height)];
+    UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, self.navigationController.navigationBar.gp_height)];
+    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(-TPCScreenW / 2 + 10, 0, TPCScreenW - 59, containerView.gp_height)];
     searchBar.placeholder = @"搜索礼物、攻略";
     searchBar.delegate = self;
     [searchBar setTintColor:[UIColor blueColor]];
