@@ -24,4 +24,15 @@
 {
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
 }
+- (void)addLikeButtonTarget:(id)target action:(SEL)action {
+    [self.likeButton addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)addShareButtonTarget:(id)target action:(SEL)action {
+    [self.shareButton addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)addCommentButtonTarget:(id)target action:(SEL)action {
+    [self.commentButton addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+}
 @end

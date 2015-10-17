@@ -71,6 +71,9 @@
 		D6805D8D1B8EBE4200CA9D8C /* GPHotWordsCollectionViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6805D8B1B8EBE4200CA9D8C /* GPHotWordsCollectionViewHeader.xib */; };
 		D694A9831B83179E00FF8616 /* GPSignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D601C0621B81A9FA0033F090 /* GPSignViewController.m */; };
 		D6AA799E1B84B2ED0065CCB4 /* GPGuideDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = D6AA799D1B84B2ED0065CCB4 /* GPGuideDetail.m */; };
+		D6B2DFAB1BD2660E0029E4B5 /* GPCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B2DFA91BD2660E0029E4B5 /* GPCommentViewController.m */; settings = {ASSET_TAGS = (); }; };
+		D6B2DFAC1BD2660E0029E4B5 /* GPCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B2DFAA1BD2660E0029E4B5 /* GPCommentViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		D6B2DFAF1BD268890029E4B5 /* GPNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B2DFAE1BD268890029E4B5 /* GPNetworkTool.m */; settings = {ASSET_TAGS = (); }; };
 		D6CE076C1B899EF00043CCBA /* GPDetailGiftController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CE076B1B899EF00043CCBA /* GPDetailGiftController.m */; };
 		D6CF10471B84E2BA00C25187 /* GPGuideBottomToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CF10461B84E2BA00C25187 /* GPGuideBottomToolBar.m */; };
 		D6CF10491B84E2F100C25187 /* GPGuideBottomToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6CF10481B84E2F100C25187 /* GPGuideBottomToolBar.xib */; };
@@ -257,6 +260,11 @@
 		D6805D8B1B8EBE4200CA9D8C /* GPHotWordsCollectionViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPHotWordsCollectionViewHeader.xib; sourceTree = "<group>"; };
 		D6AA799C1B84B2ED0065CCB4 /* GPGuideDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGuideDetail.h; sourceTree = "<group>"; };
 		D6AA799D1B84B2ED0065CCB4 /* GPGuideDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGuideDetail.m; sourceTree = "<group>"; };
+		D6B2DFA81BD2660E0029E4B5 /* GPCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPCommentViewController.h; sourceTree = "<group>"; };
+		D6B2DFA91BD2660E0029E4B5 /* GPCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPCommentViewController.m; sourceTree = "<group>"; };
+		D6B2DFAA1BD2660E0029E4B5 /* GPCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPCommentViewController.xib; sourceTree = "<group>"; };
+		D6B2DFAD1BD268890029E4B5 /* GPNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPNetworkTool.h; sourceTree = "<group>"; };
+		D6B2DFAE1BD268890029E4B5 /* GPNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPNetworkTool.m; sourceTree = "<group>"; };
 		D6CE076A1B899EF00043CCBA /* GPDetailGiftController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPDetailGiftController.h; sourceTree = "<group>"; };
 		D6CE076B1B899EF00043CCBA /* GPDetailGiftController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPDetailGiftController.m; sourceTree = "<group>"; };
 		D6CF10451B84E2BA00C25187 /* GPGuideBottomToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGuideBottomToolBar.h; sourceTree = "<group>"; };
@@ -716,6 +724,9 @@
 				D6FDE57F1BD0DF9300D69C1D /* GPQRCodeViewController.h */,
 				D6FDE5801BD0DF9300D69C1D /* GPQRCodeViewController.m */,
 				D6FDE5811BD0DF9300D69C1D /* GPQRCodeViewController.xib */,
+				D6B2DFA81BD2660E0029E4B5 /* GPCommentViewController.h */,
+				D6B2DFA91BD2660E0029E4B5 /* GPCommentViewController.m */,
+				D6B2DFAA1BD2660E0029E4B5 /* GPCommentViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -885,6 +896,8 @@
 				D6D710C91B762B6000B78189 /* GPGuideTool.m */,
 				D6D710CB1B762B7500B78189 /* GPSaveTool.h */,
 				D6D710CC1B762B7500B78189 /* GPSaveTool.m */,
+				D6B2DFAD1BD268890029E4B5 /* GPNetworkTool.h */,
+				D6B2DFAE1BD268890029E4B5 /* GPNetworkTool.m */,
 			);
 			path = "Tool(工具)";
 			sourceTree = "<group>";
@@ -1051,6 +1064,7 @@
 				D6D710A21B76255500B78189 /* Info.plist in Resources */,
 				047D7BE31B88BD420004CA24 /* GPCategoryCell.xib in Resources */,
 				D6D710D71B7634F600B78189 /* TPCUser.storyboard in Resources */,
+				D6B2DFAC1BD2660E0029E4B5 /* GPCommentViewController.xib in Resources */,
 				045A4FF01B83986C007BE282 /* GPDetailGiftCell.xib in Resources */,
 				048451D11B855DE200C73183 /* UMSLoginViewController.xib in Resources */,
 				048451CF1B855DE200C73183 /* UMShareEditViewController.xib in Resources */,
@@ -1176,11 +1190,13 @@
 				D6D710A61B76274F00B78189 /* GPNavigationController.m in Sources */,
 				D6D179021B7F365300853457 /* GPGuideDetailViewController.m in Sources */,
 				D6CF10471B84E2BA00C25187 /* GPGuideBottomToolBar.m in Sources */,
+				D6B2DFAF1BD268890029E4B5 /* GPNetworkTool.m in Sources */,
 				D6D710CA1B762B6000B78189 /* GPGuideTool.m in Sources */,
 				D65DFF881B7CF67E00897509 /* GPItem.m in Sources */,
 				04A82FC91B80C43C0060CC48 /* GPSearchGiftCell.m in Sources */,
 				D6D710A11B76255500B78189 /* AppDelegate.m in Sources */,
 				D6FDE5821BD0DF9300D69C1D /* GPQRCodeViewController.m in Sources */,
+				D6B2DFAB1BD2660E0029E4B5 /* GPCommentViewController.m in Sources */,
 				D65DFF851B7CF0F500897509 /* UIColor+TPCExtension.m in Sources */,
 				D6D2FED71B8CB67900EC3DE5 /* UICollectionViewLeftAlignedLayout.m in Sources */,
 				D6D1A5131B8E11CB00572AB7 /* GPItemViewController.m in Sources */,
@@ -1270,6 +1286,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1294,6 +1311,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
 		};
@@ -1314,6 +1332,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1354,7 +1373,7 @@
 					"$(PROJECT_DIR)/礼物说/Classes/Other(其他)/UMSocial_Sdk_4.2.3/Sina",
 					"$(PROJECT_DIR)/礼物说/Classes/Other(其他)/UMSocial_Sdk_4.2.3/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.triplec.triplecc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.triplec.triple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1378,7 +1397,7 @@
 					"$(PROJECT_DIR)/礼物说/Classes/Other(其他)/UMSocial_Sdk_4.2.3/Sina",
 					"$(PROJECT_DIR)/礼物说/Classes/Other(其他)/UMSocial_Sdk_4.2.3/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.triplec.triplecc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.triplec.triple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

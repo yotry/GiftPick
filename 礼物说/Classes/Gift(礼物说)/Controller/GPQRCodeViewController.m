@@ -25,19 +25,20 @@
 
 @implementation GPQRCodeViewController
 
-#pragma mark 懒加载
+#pragma mark 初始化
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self setupSession];
     [self setupNav];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
     
     [self setupLayers];
     [self startScan];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
     [self startAnimation];
 }
 
@@ -84,6 +85,7 @@
 }
 
 - (IBAction)help:(id)sender {
+    [self startAnimation];
 }
 
 - (void)startAnimation {

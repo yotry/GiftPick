@@ -11,6 +11,8 @@
 #import "GPGuideDetail.h"
 #import "GPGuideBottomToolBar.h"
 #import "GPGuideWebviewBottomToolBar.h"
+#import "GPCommentViewController.h"
+#import "UMSocial.h"
 
 @interface GPGuideDetailViewController() <UIWebViewDelegate, UIScrollViewDelegate>
 @property (weak, nonatomic) UIWebView *webView;
@@ -134,6 +136,10 @@ static const CGFloat GPGuideDetailTitleLeftMargin = 15;
     guideBottomToolBar.gp_centerY = TPCScreenH - guideBottomToolBar.gp_height / 2.0;
     [self.view addSubview:guideBottomToolBar];
     self.guideBottomToolBar = guideBottomToolBar;
+    
+    [guideBottomToolBar addCommentButtonTarget:self action:@selector(commentClicked)];
+    [guideBottomToolBar addShareButtonTarget:self action:@selector(shareClicked)];
+    [guideBottomToolBar addLikeButtonTarget:self action:@selector(likeClicked)];
 }
 
 - (void)setupGuideWebviewBottomToolBar
@@ -148,8 +154,54 @@ static const CGFloat GPGuideDetailTitleLeftMargin = 15;
     UIEdgeInsets edgeInset = self.webView.scrollView.contentInset;
     edgeInset.bottom += guideWebviewBottomToolBar.gp_height;
     self.webView.scrollView.contentInset = edgeInset;
+    
+    [guideWebviewBottomToolBar addCommentButtonTarget:self action:@selector(commentClicked)];
+    [guideWebviewBottomToolBar addShareButtonTarget:self action:@selector(shareClicked)];
+    [guideWebviewBottomToolBar addLikeButtonTarget:self action:@selector(likeClicked)];
 }
 
+
+- (void)commentClicked {
+    GPCommentViewController *commentVc = [[GPCommentViewController alloc] init];
+    [self.navigationController pushViewController:commentVc animated:YES];
+}
+
+- (void)shareClicked {
+    NSString *appKey = @"55d525fd67e58e7ffb0060ec";
+    NSArray *snsNames = @[UMShareToDouban, UMShareToEmail, UMShareToRenren, UMShareToSina, UMShareToWechatSession, UMShareToWechatTimeline];
+    
+    [UMSocialConfig setTheme:UMSocialThemeBlack];
+    
+    [UMSocialConfig setShareGridViewTheme:^(CGContextRef ref, UIImageView *backgroundView,UILabel *label){
+        //改变线颜色和线宽
+        CGContextSetRGBStrokeColor(ref, 0, 0, 0, 1.0);
+        CGContextSetLineWidth(ref, 1.0);
+        //改变背景颜色
+        backgroundView.backgroundColor = [UIColor blackColor];
+        
+        //添加背景图片
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:backgroundView.frame];
+        imageView.image = [UIImage imageNamed:@"Me_ProfileBackground"];
+        [backgroundView addSubview:imageView];
+        backgroundView.backgroundColor = [UIColor clearColor];
+        
+        //改变文字标题的文字颜色
+        label.textColor = [UIColor blueColor];
+        //隐藏文字
+        label.hidden = YES;
+    }];
+    
+    [UMSocialSnsService presentSnsIconSheetView:self
+                                         appKey:appKey
+                                      shareText:self.guideDetail.short_title
+                                     shareImage:nil
+                                shareToSnsNames:snsNames
+                                       delegate:nil];
+}
+
+- (void)likeClicked {
+    
+}
 #pragma mark 加载数据
 
 - (void)loadData

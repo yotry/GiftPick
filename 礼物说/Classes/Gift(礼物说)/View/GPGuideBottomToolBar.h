@@ -10,4 +10,8 @@
 
 @interface GPGuideBottomToolBar : UIView
 + (instancetype)guideBottomToolBar;
+
+- (void)addLikeButtonTarget:(id)target action:(SEL)action;
+- (void)addShareButtonTarget:(id)target action:(SEL)action;
+- (void)addCommentButtonTarget:(id)target action:(SEL)action;
 @end

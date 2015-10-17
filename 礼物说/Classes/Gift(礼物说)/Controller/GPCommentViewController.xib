@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GPCommentViewController">
+            <connections>
+                <outlet property="commentTextField" destination="FbS-Jv-7n4" id="p7x-4i-cCc"/>
+                <outlet property="inputContainerView" destination="1k8-A7-nlb" id="iQM-IZ-xXv"/>
+                <outlet property="sendButton" destination="rB8-zT-aMK" id="YwT-lO-3iX"/>
+                <outlet property="tableView" destination="nFt-aM-A6b" id="YNy-UW-ZbY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nFt-aM-A6b">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="558"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1k8-A7-nlb">
+                    <rect key="frame" x="0.0" y="558" width="600" height="42"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rB8-zT-aMK">
+                            <rect key="frame" x="540" y="5" width="50" height="32"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="a3I-gH-jYV"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="发送">
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入评论..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FbS-Jv-7n4">
+                            <rect key="frame" x="10" y="6" width="520" height="30"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" red="1" green="0.86938260869999995" blue="0.59410638240000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="rB8-zT-aMK" secondAttribute="bottom" constant="5" id="3wK-8b-7QC"/>
+                        <constraint firstItem="FbS-Jv-7n4" firstAttribute="top" secondItem="1k8-A7-nlb" secondAttribute="top" constant="5" id="8Jd-S0-L6w"/>
+                        <constraint firstAttribute="bottom" secondItem="FbS-Jv-7n4" secondAttribute="bottom" constant="5" id="DWt-IN-7mJ"/>
+                        <constraint firstAttribute="trailing" secondItem="rB8-zT-aMK" secondAttribute="trailing" constant="10" id="JFv-1d-zGz"/>
+                        <constraint firstItem="rB8-zT-aMK" firstAttribute="leading" secondItem="FbS-Jv-7n4" secondAttribute="trailing" constant="10" id="SYf-NH-eGJ"/>
+                        <constraint firstItem="rB8-zT-aMK" firstAttribute="top" secondItem="1k8-A7-nlb" secondAttribute="top" constant="5" id="ZoS-eQ-sqv"/>
+                        <constraint firstItem="FbS-Jv-7n4" firstAttribute="leading" secondItem="1k8-A7-nlb" secondAttribute="leading" constant="10" id="nf7-id-2H5"/>
+                        <constraint firstItem="FbS-Jv-7n4" firstAttribute="centerY" secondItem="1k8-A7-nlb" secondAttribute="centerY" id="oTI-6Q-M6p"/>
+                        <constraint firstAttribute="height" constant="42" id="x9A-rb-5eI"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="8Jd-S0-L6w"/>
+                            <exclude reference="DWt-IN-7mJ"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="1k8-A7-nlb" secondAttribute="bottom" id="DMA-6a-TVC"/>
+                <constraint firstItem="nFt-aM-A6b" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="DfF-Da-sX1"/>
+                <constraint firstItem="1k8-A7-nlb" firstAttribute="top" secondItem="nFt-aM-A6b" secondAttribute="bottom" id="Fmx-kj-Hgr"/>
+                <constraint firstAttribute="trailing" secondItem="nFt-aM-A6b" secondAttribute="trailing" id="HZC-IK-v94"/>
+                <constraint firstItem="nFt-aM-A6b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IyE-eA-SZG"/>
+                <constraint firstAttribute="trailing" secondItem="1k8-A7-nlb" secondAttribute="trailing" id="TVy-ey-78L"/>
+                <constraint firstItem="1k8-A7-nlb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="m1b-be-x73"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

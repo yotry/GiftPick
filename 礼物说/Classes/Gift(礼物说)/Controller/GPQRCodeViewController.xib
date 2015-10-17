@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0z-Y6-Ptf">
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0z-Y6-Ptf">
                     <rect key="frame" x="175" y="125" width="250" height="250"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_border" translatesAutoresizingMaskIntoConstraints="NO" id="Gk0-dm-cnj">
@@ -28,7 +28,7 @@
                             <animations/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_scanline_qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="qHE-qu-Jhq">
-                            <rect key="frame" x="0.0" y="8" width="250" height="242"/>
+                            <rect key="frame" x="0.0" y="-250" width="250" height="242"/>
                             <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="250" id="OoK-1x-gMA"/>
@@ -46,7 +46,7 @@
                         <constraint firstAttribute="height" constant="250" id="iqz-6a-8fQ"/>
                         <constraint firstItem="qHE-qu-Jhq" firstAttribute="centerX" secondItem="Q0z-Y6-Ptf" secondAttribute="centerX" id="qEk-GZ-FK4"/>
                         <constraint firstItem="Gk0-dm-cnj" firstAttribute="leading" secondItem="Q0z-Y6-Ptf" secondAttribute="leading" id="rCx-yt-SEX"/>
-                        <constraint firstItem="qHE-qu-Jhq" firstAttribute="top" secondItem="Q0z-Y6-Ptf" secondAttribute="top" constant="8" id="v1h-a8-6dq"/>
+                        <constraint firstItem="qHE-qu-Jhq" firstAttribute="top" secondItem="Q0z-Y6-Ptf" secondAttribute="top" constant="-250" id="v1h-a8-6dq"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OkM-0w-QJw">
