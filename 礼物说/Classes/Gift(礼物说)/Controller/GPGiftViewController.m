@@ -11,6 +11,8 @@
 #import "GPChoicenessViewController.h"
 #import "GPEditChannelView.h"
 #import "GPSearchViewController.h"
+#import "GPQRCodeViewController.h"
+#import "GPNavigationController.h"
 
 // 标签按钮最大可见数
 static const CGFloat TPCLabelButtonMaxVisibleCount = 5;
@@ -276,7 +278,8 @@ static const CGFloat TPCLabelButtonMaxVisibleCount = 5;
 // 扫描二维码
 - (void)scanQRCode
 {
-    
+    GPQRCodeViewController *QRCodeVc = [[GPQRCodeViewController alloc] init];
+    [self.navigationController pushViewController:QRCodeVc animated:YES];
 }
 
 // 编辑标签模式

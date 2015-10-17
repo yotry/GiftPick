@@ -52,6 +52,24 @@
         [self.cornerBoarderColor set];
         [[self pathWithCornerRadius:self.cornerBoarderRadius] stroke];
     }
+    
+    if (self.isDrawUnderLine) {
+        [self drawUnderLine:rect];
+    }
+}
+
+- (void)drawUnderLine:(CGRect)rect
+{
+    CGFloat buttonH = rect.size.height;
+    CGFloat buttonW = rect.size.width;
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextMoveToPoint(context, 0, buttonH);
+    CGContextAddLineToPoint(context, buttonW, buttonH);
+    
+    [self.titleLabel.textColor set];
+    CGContextStrokePath(context);
 }
 
 - (UIBezierPath *)pathWithCornerRadius:(CGFloat)cornerRadius

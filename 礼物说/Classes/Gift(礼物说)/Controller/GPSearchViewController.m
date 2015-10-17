@@ -145,6 +145,7 @@ static const CGFloat GPHotWordsCollectionMargin = 10;
 
 - (void)setupSearchBar
 {
+    // 从中间开始，向左偏移半个屏幕长度左右
     UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, self.navigationController.navigationBar.gp_height)];
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(-TPCScreenW / 2 + 10, 0, TPCScreenW - 59, containerView.gp_height)];
     searchBar.placeholder = @"搜索礼物、攻略";

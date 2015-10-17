@@ -126,6 +126,9 @@
 		D6DC476B1B7B76640081641F /* GPChoicenessHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6DC476A1B7B76640081641F /* GPChoicenessHeaderView.xib */; };
 		D6DC476E1B7B78BF0081641F /* GPVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DC476D1B7B78BF0081641F /* GPVerticalButton.m */; };
 		D6E7DC891B8DB35300DA096F /* GPBrandCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E7DC881B8DB35300DA096F /* GPBrandCell.xib */; };
+		D6FDE5821BD0DF9300D69C1D /* GPQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FDE5801BD0DF9300D69C1D /* GPQRCodeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		D6FDE5831BD0DF9300D69C1D /* GPQRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6FDE5811BD0DF9300D69C1D /* GPQRCodeViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		D6FF71F91BD1062900536151 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6FF71F81BD1062800536151 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -353,6 +356,10 @@
 		D6DC476C1B7B78BF0081641F /* GPVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPVerticalButton.h; sourceTree = "<group>"; };
 		D6DC476D1B7B78BF0081641F /* GPVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPVerticalButton.m; sourceTree = "<group>"; };
 		D6E7DC881B8DB35300DA096F /* GPBrandCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPBrandCell.xib; sourceTree = "<group>"; };
+		D6FDE57F1BD0DF9300D69C1D /* GPQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPQRCodeViewController.h; sourceTree = "<group>"; };
+		D6FDE5801BD0DF9300D69C1D /* GPQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPQRCodeViewController.m; sourceTree = "<group>"; };
+		D6FDE5811BD0DF9300D69C1D /* GPQRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPQRCodeViewController.xib; sourceTree = "<group>"; };
+		D6FF71F81BD1062800536151 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,6 +367,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6FF71F91BD1062900536151 /* AVFoundation.framework in Frameworks */,
 				048451DC1B855F2400C73183 /* libz.dylib in Frameworks */,
 				048451DA1B855F1A00C73183 /* libsqlite3.0.dylib in Frameworks */,
 				048451D81B855EDC00C73183 /* SystemConfiguration.framework in Frameworks */,
@@ -509,6 +517,7 @@
 		A2009968394956CFEECB511D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D6FF71F81BD1062800536151 /* AVFoundation.framework */,
 				048451DB1B855F2400C73183 /* libz.dylib */,
 				048451D91B855F1A00C73183 /* libsqlite3.0.dylib */,
 				048451D71B855EDC00C73183 /* SystemConfiguration.framework */,
@@ -704,6 +713,9 @@
 				D6D056221B8B01B800A4F385 /* GPSearchViewController.h */,
 				D6D056231B8B01B800A4F385 /* GPSearchViewController.m */,
 				D6D2FED31B8CB0EC00EC3DE5 /* GPSearchViewController.xib */,
+				D6FDE57F1BD0DF9300D69C1D /* GPQRCodeViewController.h */,
+				D6FDE5801BD0DF9300D69C1D /* GPQRCodeViewController.m */,
+				D6FDE5811BD0DF9300D69C1D /* GPQRCodeViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -997,6 +1009,7 @@
 				TargetAttributes = {
 					D6D710411B75FD9600B78189 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 8BU8NMY9TY;
 					};
 					D6D7105A1B75FD9600B78189 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -1057,6 +1070,7 @@
 				048451D01B855DE200C73183 /* UMShareEditViewControlleriPad.xib in Resources */,
 				048451C91B855DE200C73183 /* UMSocialLocalizable.strings in Resources */,
 				048451CC1B855DE200C73183 /* UMSCommentDetailController.xib in Resources */,
+				D6FDE5831BD0DF9300D69C1D /* GPQRCodeViewController.xib in Resources */,
 				048451D31B855DE200C73183 /* UMSShareListController.xib in Resources */,
 				047D7BED1B88BF4E0004CA24 /* GPSubCategoryReusableView.xib in Resources */,
 				04A82FCA1B80C43C0060CC48 /* GPSearchGiftCell.xib in Resources */,
@@ -1166,6 +1180,7 @@
 				D65DFF881B7CF67E00897509 /* GPItem.m in Sources */,
 				04A82FC91B80C43C0060CC48 /* GPSearchGiftCell.m in Sources */,
 				D6D710A11B76255500B78189 /* AppDelegate.m in Sources */,
+				D6FDE5821BD0DF9300D69C1D /* GPQRCodeViewController.m in Sources */,
 				D65DFF851B7CF0F500897509 /* UIColor+TPCExtension.m in Sources */,
 				D6D2FED71B8CB67900EC3DE5 /* UICollectionViewLeftAlignedLayout.m in Sources */,
 				D6D1A5131B8E11CB00572AB7 /* GPItemViewController.m in Sources */,
@@ -1326,6 +1341,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "礼物说/Classes/Other(其他)/礼物说.pch";
@@ -1338,6 +1354,7 @@
 					"$(PROJECT_DIR)/礼物说/Classes/Other(其他)/UMSocial_Sdk_4.2.3/Sina",
 					"$(PROJECT_DIR)/礼物说/Classes/Other(其他)/UMSocial_Sdk_4.2.3/Wechat",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.triplec.triplecc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1348,6 +1365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "礼物说/Classes/Other(其他)/礼物说.pch";
@@ -1360,6 +1378,7 @@
 					"$(PROJECT_DIR)/礼物说/Classes/Other(其他)/UMSocial_Sdk_4.2.3/Sina",
 					"$(PROJECT_DIR)/礼物说/Classes/Other(其他)/UMSocial_Sdk_4.2.3/Wechat",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.triplec.triplecc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

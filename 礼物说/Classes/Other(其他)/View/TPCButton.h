@@ -19,4 +19,7 @@ IB_DESIGNABLE
 
 /** 圆角按钮背景颜色 */
 @property (strong, nonatomic) UIColor *cornerBackgroundColor;
+
+/** 绘制下划线 */
+@property (assign, nonatomic, getter=isDrawUnderLine) IBInspectable BOOL drawUnderLine;
 @end
