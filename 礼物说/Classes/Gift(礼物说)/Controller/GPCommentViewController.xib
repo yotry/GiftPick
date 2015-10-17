@@ -8,7 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GPCommentViewController">
             <connections>
                 <outlet property="commentTextField" destination="FbS-Jv-7n4" id="p7x-4i-cCc"/>
-                <outlet property="inputContainerView" destination="1k8-A7-nlb" id="iQM-IZ-xXv"/>
+                <outlet property="inputContainerViewBottomConstraint" destination="DMA-6a-TVC" id="nc0-bc-dhb"/>
                 <outlet property="sendButton" destination="rB8-zT-aMK" id="YwT-lO-3iX"/>
                 <outlet property="tableView" destination="nFt-aM-A6b" id="YNy-UW-ZbY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -37,22 +37,28 @@
                             <state key="normal" title="发送">
                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <state key="selected">
+                                <color key="titleColor" red="0.96862745098039216" green="0.30588235294117649" blue="0.32156862745098042" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="sendClicked:" destination="-1" eventType="touchUpInside" id="O6c-5R-XJw"/>
+                            </connections>
                         </button>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入评论..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FbS-Jv-7n4">
-                            <rect key="frame" x="10" y="6" width="520" height="30"/>
+                            <rect key="frame" x="10" y="6" width="525" height="30"/>
                             <animations/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="namePhonePad" returnKeyType="send"/>
                         </textField>
                     </subviews>
                     <animations/>
-                    <color key="backgroundColor" red="1" green="0.86938260869999995" blue="0.59410638240000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.30128272804054052" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="rB8-zT-aMK" secondAttribute="bottom" constant="5" id="3wK-8b-7QC"/>
                         <constraint firstItem="FbS-Jv-7n4" firstAttribute="top" secondItem="1k8-A7-nlb" secondAttribute="top" constant="5" id="8Jd-S0-L6w"/>
                         <constraint firstAttribute="bottom" secondItem="FbS-Jv-7n4" secondAttribute="bottom" constant="5" id="DWt-IN-7mJ"/>
                         <constraint firstAttribute="trailing" secondItem="rB8-zT-aMK" secondAttribute="trailing" constant="10" id="JFv-1d-zGz"/>
-                        <constraint firstItem="rB8-zT-aMK" firstAttribute="leading" secondItem="FbS-Jv-7n4" secondAttribute="trailing" constant="10" id="SYf-NH-eGJ"/>
+                        <constraint firstItem="rB8-zT-aMK" firstAttribute="leading" secondItem="FbS-Jv-7n4" secondAttribute="trailing" constant="5" id="SYf-NH-eGJ"/>
                         <constraint firstItem="rB8-zT-aMK" firstAttribute="top" secondItem="1k8-A7-nlb" secondAttribute="top" constant="5" id="ZoS-eQ-sqv"/>
                         <constraint firstItem="FbS-Jv-7n4" firstAttribute="leading" secondItem="1k8-A7-nlb" secondAttribute="leading" constant="10" id="nf7-id-2H5"/>
                         <constraint firstItem="FbS-Jv-7n4" firstAttribute="centerY" secondItem="1k8-A7-nlb" secondAttribute="centerY" id="oTI-6Q-M6p"/>

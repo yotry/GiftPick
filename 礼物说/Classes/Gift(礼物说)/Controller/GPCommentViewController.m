@@ -12,7 +12,8 @@
 #import "GPNetworkTool.h"
 
 @interface GPCommentViewController () <UITableViewDataSource, UITableViewDelegate>
-@property (weak, nonatomic) IBOutlet UIView *inputContainerView;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *inputContainerViewBottomConstraint;
 @property (weak, nonatomic) IBOutlet UITextField *commentTextField;
 @property (weak, nonatomic) IBOutlet UIButton *sendButton;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -21,7 +22,7 @@
 @property (strong, nonatomic) NSString *nextPageURLString;
 @end
 
-static NSString *commentIdentifier = @"comment";
+static NSString * const commentIdentifier = @"comment";
 
 @implementation GPCommentViewController
 
@@ -44,8 +45,15 @@ static NSString *commentIdentifier = @"comment";
     [self setupNav];
 }
 
+- (void)dealloc {
+    [[GPNetworkTool sharedNetworkTool].operationQueue cancelAllOperations];
+}
+
 - (void)setupNav {
     self.navigationItem.title = @"评论";
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldChanged) name:UITextFieldTextDidChangeNotification object:self.commentTextField];
 }
 
 - (void)setupTableView {
@@ -65,6 +73,8 @@ static NSString *commentIdentifier = @"comment";
     [self.tableView.header beginRefreshing];
     self.tableView.footer.hidden = YES;
 }
+
+#pragma mark 加载数据
 
 - (void)loadNewData {
     NSString *firstPageURLString = @"v1/posts/1001837/comments?limit=20&offset=0";
@@ -111,8 +121,7 @@ static NSString *commentIdentifier = @"comment";
 
 }
 
-- (void)checkFooterState
-{
+- (void)checkFooterState {
     if (self.nextPageURLString == nil) {
         //        [self.tableView.footer noticeNoMoreData];
         self.tableView.footer.hidden = YES;
@@ -121,6 +130,20 @@ static NSString *commentIdentifier = @"comment";
     }
 }
 
+- (IBAction)sendClicked:(id)sender {
+    NSLog(@"发送评论");
+}
+#pragma mark 通知回调
+
+- (void)textFieldChanged {
+    self.sendButton.selected = self.commentTextField.hasText;
+}
+
+- (void)keyboardWillChangeFrame:(NSNotification *)notification {
+    CGRect keyboardFrame = [notification.userInfo[@"UIKeyboardFrameEndUserInfoKey"] CGRectValue];
+    self.inputContainerViewBottomConstraint.constant = TPCScreenH - keyboardFrame.origin.y;
+    [self.view layoutIfNeeded];
+}
 #pragma mark UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -135,4 +158,17 @@ static NSString *commentIdentifier = @"comment";
 }
 
 #pragma mark UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    GPGiftComment *comment = self.comments[indexPath.row];
+    self.commentTextField.placeholder = [NSString stringWithFormat:@"回复 %@", comment.nickname];
+    self.commentTextField.text = @"";
+    self.sendButton.selected = self.commentTextField.hasText;
+    [self.commentTextField becomeFirstResponder];
+    [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [self.view endEditing:YES];
+    self.commentTextField.placeholder = @"输入评论...";
+}
 @end
