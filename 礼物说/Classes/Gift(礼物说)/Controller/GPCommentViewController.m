@@ -47,6 +47,7 @@ static NSString * const commentIdentifier = @"comment";
 
 - (void)dealloc {
     [[GPNetworkTool sharedNetworkTool].operationQueue cancelAllOperations];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)setupNav {
