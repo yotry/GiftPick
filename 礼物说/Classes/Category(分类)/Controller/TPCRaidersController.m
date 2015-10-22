@@ -200,6 +200,10 @@
 }
 
 #pragma mark - RaiderHeaderViewDelegate
+- (void)raiderHeaderViewDidClickCheckAllButton:(GPRaiderHeaderView *)headerView {
+    NSLog(@"---");
+}
+
 - (void)raiderHeaderViewDidClickWithCollection:(GPRaiderCollection *)collection {
     GPChannelViewController *channelVc = [[GPChannelViewController alloc] init];
     

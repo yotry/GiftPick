@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-@class GPRaiderCollection;
+@class GPRaiderCollection, GPRaiderHeaderView;
 @protocol RaiderHeaderViewDelegate <NSObject>
 
 @optional
 - (void)raiderHeaderViewDidClickWithCollection:(GPRaiderCollection *)collection;
-
+- (void)raiderHeaderViewDidClickCheckAllButton:(GPRaiderHeaderView *)headerView;
 @end
 
 @interface GPRaiderHeaderView : UIView
@@ -21,7 +21,6 @@
 + (instancetype)raiderHeaderView;
 
 @end
-
 
 @interface RaiderHeaderImageView : UIImageView
 @property (nonatomic, strong) GPRaiderCollection *collection; /**模型 */

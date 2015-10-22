@@ -37,8 +37,9 @@
 //        [titleLabel layoutIfNeeded];
         
         UIButton *checkAllButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [checkAllButton setTitle:@"查看全部" forState:UIControlStateNormal];
+        [checkAllButton setTitle:@"查看全部>" forState:UIControlStateNormal];
         [checkAllButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+        [checkAllButton addTarget:self action:@selector(checkAllButtonClicked) forControlEvents:UIControlEventTouchUpInside];
         checkAllButton.titleLabel.font = [UIFont systemFontOfSize:12];
         [self addSubview:checkAllButton];
         [checkAllButton makeConstraints:^(MASConstraintMaker *make) {
@@ -57,6 +58,13 @@
         self.scrollView = scrollView;
     }
     return self;
+}
+
+- (void)checkAllButtonClicked {
+    NSLog(@"%s", __func__);
+    if ([self.delegate respondsToSelector:@selector(raiderHeaderViewDidClickCheckAllButton:)]) {
+        [self.delegate raiderHeaderViewDidClickCheckAllButton:self];
+    }
 }
 
 - (void)setCollections:(NSArray *)collections {
