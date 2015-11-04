@@ -130,16 +130,19 @@
 
     if (images.count < 1) return;
     
-    // 设置默认图片
-    self.currentImageView.image = images[0];
-    self.currentImageView.tag = 0;
-    
-    // 小于等于1张就不设置左右图片
-    if (images.count > 1) {
-        self.leftImageView.image = images[images.count - 1];
-        self.rightImageView.image = images[1];
-        self.leftImageView.tag = images.count - 1;
-        self.rightImageView.tag = 1;
+    UIImage *firstImage = _images[0];
+    if (firstImage.size.width && firstImage.size.height && self.currentImageView.image == nil) {
+        // 设置默认图片
+        self.currentImageView.image = images[0];
+        self.currentImageView.tag = 0;
+        
+        // 小于等于1张就不设置左右图片
+        if (images.count > 1) {
+            self.leftImageView.image = images[images.count - 1];
+            self.rightImageView.image = images[1];
+            self.leftImageView.tag = images.count - 1;
+            self.rightImageView.tag = 1;
+        }
     }
     
     //设置页数
@@ -176,6 +179,7 @@
                 imagesTemp[i] = image;
                 self.images = imagesTemp;
             }
+            
         }];
     }
 }
