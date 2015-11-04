@@ -7,6 +7,7 @@
 //
 
 #import "GPPageScrollView.h"
+#import <SDWebImageManager.h>
 
 #define kPageControlHeight 37
 #define kPageControlEachWidth 16
@@ -126,6 +127,8 @@
 - (void)setImages:(NSArray *)images
 {
     _images = images;
+
+    if (images.count < 1) return;
     
     // 设置默认图片
     self.currentImageView.image = images[0];
@@ -153,7 +156,7 @@
     self.scrollView.scrollEnabled = !(self.images.count <= 1);
     
     // 下载完成重启定时器
-    if (self.isAutoPaging) {
+    if (!self.isTimerRuning) {
         [self startAutoPaging];
     }
 }
@@ -163,41 +166,18 @@
     _imageURLStrings = imageURLStrings;
     
     NSMutableArray *imagesTemp = [NSMutableArray arrayWithCapacity:imageURLStrings.count];
-    
-    // 先下载显示第一张图片
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[imageURLStrings firstObject]]]];
-        if (image) {
-            [imagesTemp addObject:image];
-        }
-        dispatch_sync(dispatch_get_main_queue(), ^{
-            self.currentImageView.image = image;
-            
-            // 设置显示中间的图片
-            CGFloat imageViewW = self.scrollView.bounds.size.width;
-            [self.scrollView setContentOffset:CGPointMake(imageViewW, 0)];
-            
-            //设置页数
-            self.pageControl.numberOfPages = imageURLStrings.count;
-            
-            // 设置UIPageControl位置
-            [self setPageControlPostion];
-            
-        });
-        
-        // 再下载剩余图片
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            for (NSInteger i = 1; i < imageURLStrings.count; i++) {
-                UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imageURLStrings[i]]]];
-                if (image) {
-                    [imagesTemp addObject:image];
-                }
-            }
-            dispatch_sync(dispatch_get_main_queue(), ^{
+    for (NSInteger i = 0; i < imageURLStrings.count; i++) {
+        [imagesTemp addObject:[[UIImage alloc] init]];
+    }
+    self.images = imagesTemp;
+    for (NSInteger i = 0; i < imageURLStrings.count; i++) {
+        [[SDWebImageManager sharedManager] downloadImageWithURL:imageURLStrings[i] options:SDWebImageRetryFailed progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+            if (image) {
+                imagesTemp[i] = image;
                 self.images = imagesTemp;
-            });
-        });
-    });
+            }
+        }];
+    }
 }
 #pragma mark 布局相关
 - (void)layoutSubviews
@@ -288,6 +268,10 @@
         self.timer = [NSTimer timerWithTimeInterval:self.pagingInterval target:self selector:@selector(nextPage) userInfo:nil repeats:YES];
         [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     }
+}
+
+- (BOOL)isTimerRuning {
+    return self.timer.isValid;
 }
 
 /**

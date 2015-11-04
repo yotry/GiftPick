@@ -28,7 +28,7 @@ IB_DESIGNABLE
 @property (weak, nonatomic) id<GPPageScrollViewDelegate> delegate;
 
 /** 
- * 图片url（网络的也可以）
+ * 网络图片url
  */
 @property (strong, nonatomic) NSArray *imageURLStrings;
 
