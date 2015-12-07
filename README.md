@@ -6,8 +6,7 @@
 - 代码没有对模块进行细化
 - 代码没有实现profile模块
 - 代码没有过多抽取公用控件
-- 由两人([heeween](https://github.com/heeween/heeween.github.io))通过git远程协作
-- 集中在在21:00～24:00左右时间内编写
+- 由两人([heeween](https://github.com/heeween/heeween.github.io))在闲暇时间通过git远程协作
 
 ![](./README/2015-09-13 00_04_41.gif)
 ![](./README/2015-09-13 00_05_36.gif)
